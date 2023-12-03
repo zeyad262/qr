@@ -1,0 +1,55 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Cairo', sans-serif;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: -webkit-fill-available;
+    margin-bottom: 30px;
+    width: -webkit-fill-available;
+    max-width: max-content;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    padding: 8px;
+    margin: 0;
+    width: 90%;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    
+}
+
+#qrCodeContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    
+}

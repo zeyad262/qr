@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvg/1.5/canvg.min.js"></script>
+    <script src="https://unpkg.com/bwip-js@1.6.4/build/bwip.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+
+    <title>Code Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>QRCode Generator</h1>
+        <label for="linkInput">Enter URL:</label>
+        <input type="text" id="linkInput" required>
+        <button onclick="generateCode('qrCodeContainer', 'qrcode')">Generate QR Code</button> 
+        <button type="button" id="download-qr-btn">Download QR Code</button>
+        <div id="qrCodeContainer"></div>
+        <!-- Add this button inside the form for the QR code -->
+
+
+    </div>
+
+    <div class="container">
+        <h1>BarCode Generator</h1>
+        <label for="barcodeInput">Enter Value:</label>
+        <input type="text" id="barcodeInput" onchange="generateBarcode(this.value)">
+        
+        <button id="btn">Generate BarCode</button> 
+        <button type="button" id="download-barcode-btn">Download Barcode</button>
+        <div>
+            <svg class="barcode"
+            jsbarcode-value="123456789012"
+            jsbarcode-textmargin="0"
+            jsbarcode-fontoptions="bold">
+            >            
+            </svg>
+         
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
